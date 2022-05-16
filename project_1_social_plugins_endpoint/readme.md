@@ -15,7 +15,7 @@ docker-compose up -d --build
 
 #### Lakukan Pengetesan Dengan Command di Bawah
 ```
-docker exec -it pivot_data npm test
+docker exec -it social_plugins npm test
 ```
 
 #### Akses aplikasi pada http://localhost:4000/twitter/timeline
