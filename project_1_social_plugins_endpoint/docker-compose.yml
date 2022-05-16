@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  social_plugins:
+    build:
+      context: .
+    container_name: "social_plugins"
+    ports:
+    - "4000:4000"
+    volumes:
+      - ./:/app
+    networks:
+      - fdn
+    restart: always
+networks:
+  fdn:
+    external: true
