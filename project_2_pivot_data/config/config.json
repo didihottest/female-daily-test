@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "fdnetwork",
+    "password": "fdnetwork",
+    "database": "fdnetwork",
+    "host": "fdn-db",
+    "dialect": "postgres",
+    "port": 5432
+  },
+  "test": {
+    "username": "fdnetwork",
+    "password": "fdnetwork",
+    "database": "fdnetwork",
+    "host": "fdn-db",
+    "dialect": "postgres",
+    "port": 5432
+  },
+  "production": {
+    "username": "fdnetwork",
+    "password": "fdnetwork",
+    "database": "fdnetwork",
+    "host": "fdn-db",
+    "dialect": "postgres",
+    "port": 5432
+  }
+}

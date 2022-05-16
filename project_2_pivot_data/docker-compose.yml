@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  pivot_data:
+    build:
+      context: .
+    container_name: "pivot_data"
+    ports:
+    - "5000:5000"
+    volumes:
+      - ./:/app
+    networks:
+      - fdn
+    restart: always
+    environment:
+      - PGHOST=fdn-db # NAME OF THE SERVICE
+    depends_on: 
+      -  fdn-db
+
+  fdn-db:
+    container_name: fdn-db
+    image: postgres:12
+    ports:
+      - "5100:5432"
+    volumes:
+    - db_volume:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=fdnetwork
+      - POSTGRES_PASSWORD=fdnetwork
+      - POSTGRES_DB=fdnetwork
+    networks: 
+      - fdn
+ 
+networks:
+  fdn:
+    external: true
+volumes:
+  db_volume:
+    external: true
